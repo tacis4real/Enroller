@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3F00270-79CD-4274-A85A-25FF88EA92E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BioEnumerator</RootNamespace>
+    <AssemblyName>BioEnumerator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>f6806c2a</NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Camera_NET">
+      <HintPath>..\DLL\Camera_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\DLL\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2010, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DirectShowLib-2010.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPCtlXTypeLibNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\DLL\DPFPCtlXTypeLibNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPCtlXWrapperNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DPFPCtlXWrapperNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPGuiNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d4f4a0bd9c559145, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DPFPGuiNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrXTypeLibNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\DLL\DPFPShrXTypeLibNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\DLL\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\DLL\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\DLL\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.2.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.2.1\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Designer">
+      <HintPath>..\DLL\SQLite.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.106.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.106.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.106.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions">
+      <HintPath>..\DLL\Transitions.dll</HintPath>
+    </Reference>
+    <Reference Include="xplugwinutil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\xplugwinutil.dll</HintPath>
+    </Reference>
+    <Reference Include="xSQLiteMigrationSqlGenerator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\xSQLiteMigrationSqlGenerator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIServer\APIObjs\RegObjs.cs" />
+    <Compile Include="APIServer\APIObjs\RemoteAPIObjs.cs" />
+    <Compile Include="APIServer\APIObjs\RespObjs.cs" />
+    <Compile Include="APIServer\DataLoader\Controller.cs" />
+    <Compile Include="APIServer\DataLoader\WebAPIHelper.cs" />
+    <Compile Include="API\AppManager.cs" />
+    <Compile Include="CommonUtils\CustomHelper.cs" />
+    <Compile Include="CommonUtils\EnumHelper.cs" />
+    <Compile Include="CommonUtils\FingerEnrollData.cs" />
+    <Compile Include="CommonUtils\NavigationHelper.cs" />
+    <Compile Include="DataAccessManager\CommonUtils\DigitalPersonaFingerScanner.cs" />
+    <Compile Include="DataAccessManager\DataContract\AppConfigSetting.cs" />
+    <Compile Include="DataAccessManager\DataContract\Beneficiary.cs" />
+    <Compile Include="DataAccessManager\DataContract\BeneficiaryBiometric.cs" />
+    <Compile Include="DataAccessManager\DataContract\ClientHostSetting.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\StaffUser.cs" />
+    <Compile Include="DataAccessManager\DataContract\Occupation.cs" />
+    <Compile Include="DataAccessManager\Repository\AppConfigSettingRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\BeneficiaryBiometricRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\BeneficiaryRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\CorporateInfoRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\Helpers\EnrollHelper.cs" />
+    <Compile Include="DataAccessManager\Repository\StationInfoRepository.cs" />
+    <Compile Include="DataAccessManager\Service\AppConfigSettingService.cs" />
+    <Compile Include="DataAccessManager\Service\BeneficiaryBiometricService.cs" />
+    <Compile Include="DataAccessManager\Service\BeneficiaryService.cs" />
+    <Compile Include="DataAccessManager\Service\Contract\IServiceProvider.cs" />
+    <Compile Include="DataAccessManager\Service\Contract\ServiceProvider.cs" />
+    <Compile Include="DataAccessManager\Service\Contract\StandardServiceProvider.cs" />
+    <Compile Include="DataAccessManager\Service\CorporateInfoService.cs" />
+    <Compile Include="DataAccessManager\Service\LocalAreaService.cs" />
+    <Compile Include="DataAccessManager\Service\RoleService.cs" />
+    <Compile Include="DataAccessManager\Service\StateService.cs" />
+    <Compile Include="DataAccessManager\Service\StationInfoService.cs" />
+    <Compile Include="DataAccessManager\Service\UserProfileService.cs" />
+    <Compile Include="DataAccessManager\Service\UserService.cs" />
+    <Compile Include="DataManagement\frmChooseScanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement\frmChooseScanner.Designer.cs">
+      <DependentUpon>frmChooseScanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\frmModuleDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement\frmModuleDisplay.Designer.cs">
+      <DependentUpon>frmModuleDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmBusy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmBusy.Designer.cs">
+      <DependentUpon>frmBusy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmUpdateHostSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmUpdateHostSetting.Designer.cs">
+      <DependentUpon>frmUpdateHostSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmEditDataPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmEditDataPopUp.Designer.cs">
+      <DependentUpon>frmEditDataPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmCaptureImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManagement\PopUps\frmCaptureImage.Designer.cs">
+      <DependentUpon>frmCaptureImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclCaptureFinger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclCaptureFinger.Designer.cs">
+      <DependentUpon>UclCaptureFinger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclCaptureImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclCaptureImage.Designer.cs">
+      <DependentUpon>UclCaptureImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclDashboardCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclDashboardCounter.Designer.cs">
+      <DependentUpon>UclDashboardCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclDataCapture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclDataCapture.Designer.cs">
+      <DependentUpon>UclDataCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclEditData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclEditData.Designer.cs">
+      <DependentUpon>UclEditData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclEnroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclEnroll.Designer.cs">
+      <DependentUpon>UclEnroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclFingerEnroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclFingerEnroll.Designer.cs">
+      <DependentUpon>UclFingerEnroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclLocalDataReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclLocalDataReport.Designer.cs">
+      <DependentUpon>UclLocalDataReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclPreview.Designer.cs">
+      <DependentUpon>UclPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManagement\UclUploadData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataManagement\UclUploadData.Designer.cs">
+      <DependentUpon>UclUploadData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameworkControls\uclDisplayLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrameworkControls\uclDisplayLabel.designer.cs">
+      <DependentUpon>uclDisplayLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameworkControls\UclGridPager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrameworkControls\UclGridPager.designer.cs">
+      <DependentUpon>UclGridPager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameworkControls\xMetroGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrameworkControls\xMetroGridPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrameworkControls\xPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmCorporateRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCorporateRegistration.Designer.cs">
+      <DependentUpon>frmCorporateRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GSetting\HelperObj.cs" />
+    <Compile Include="GSetting\Utils.cs" />
+    <Compile Include="GSetting\xMessageFilters.cs" />
+    <Compile Include="Migrations\201804081443347_migrationX1.cs" />
+    <Compile Include="Migrations\201804081443347_migrationX1.Designer.cs">
+      <DependentUpon>201804081443347_migrationX1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoteHelper\ExternalTool\InternetHelp.cs" />
+    <Compile Include="API\UserManager.cs" />
+    <Compile Include="DataAccessManager\CommonUtils\InternetCon.cs" />
+    <Compile Include="DataAccessManager\DataContract\CompanyInfo.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\CheckAccountNumberAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\CheckAmountAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\CheckAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\CheckMobileNumberAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\CheckNameAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\CheckNumberAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\EnumDef.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\OldEnoughValidationAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\PropertiesMustMatchAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\RemoteParamHelper.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\ReportDisplayHelpers.cs" />
+    <Compile Include="DataAccessManager\DataContract\ContractHelper\ValidatePasswordLengthAttribute.cs" />
+    <Compile Include="DataAccessManager\DataContract\LocalArea.cs" />
+    <Compile Include="DataAccessManager\DataContract\Message.cs" />
+    <Compile Include="DataAccessManager\DataContract\Role.cs" />
+    <Compile Include="DataAccessManager\DataContract\StaffUserInfo.cs" />
+    <Compile Include="DataAccessManager\DataContract\State.cs" />
+    <Compile Include="DataAccessManager\DataContract\StationInfo.cs" />
+    <Compile Include="DataAccessManager\DataContract\Status.cs" />
+    <Compile Include="DataAccessManager\DataContract\User.cs" />
+    <Compile Include="DataAccessManager\DataContract\UserInformation.cs" />
+    <Compile Include="DataAccessManager\DataContract\UserLoginTrail.cs" />
+    <Compile Include="DataAccessManager\DataContract\UserProfile.cs" />
+    <Compile Include="DataAccessManager\DataContract\UserProfileInformation.cs" />
+    <Compile Include="DataAccessManager\DataManager\BioEnumeratorModel.cs" />
+    <Compile Include="DataAccessManager\DataManager\MigConfig.cs" />
+    <Compile Include="DataAccessManager\DataManager\ModelAssistance.cs" />
+    <Compile Include="DataAccessManager\Infrastructure\BioEnumeratorContext.cs" />
+    <Compile Include="DataAccessManager\Infrastructure\BioEnumeratorRepository.cs" />
+    <Compile Include="DataAccessManager\Infrastructure\BioEnumeratorUoWork.cs" />
+    <Compile Include="DataAccessManager\Infrastructure\Contract\IBioEnumeratorContext.cs" />
+    <Compile Include="DataAccessManager\Infrastructure\Contract\IBioEnumeratorRepository.cs" />
+    <Compile Include="DataAccessManager\Infrastructure\Contract\IBioEnumeratorUoWork.cs" />
+    <Compile Include="DataAccessManager\Infrastructure\Contract\SortOrder.cs" />
+    <Compile Include="DataAccessManager\Repository\Helpers\EncryptionHelper.cs" />
+    <Compile Include="DataAccessManager\Repository\Helpers\EntityValidatorHelper.cs" />
+    <Compile Include="DataAccessManager\Repository\LocalAreaRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\RoleRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\StateRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\UserLoginTrailRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\UserProfileRepository.cs" />
+    <Compile Include="DataAccessManager\Repository\UserRepository.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\AccessParameter.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\AuthParameter.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\Deserializer.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\JsonSerializer.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\PolicyException.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\RequestError.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\RequestHelperObjs.cs" />
+    <Compile Include="RemoteHelper\ExternalTool\RequestResponseHelper.cs" />
+    <Compile Include="RemoteHelper\MessengerService\MessengeContracts.cs" />
+    <Compile Include="RemoteHelper\MessengerService\RemoteMessanger.cs" />
+    <EmbeddedResource Include="DataManagement\frmChooseScanner.resx">
+      <DependentUpon>frmChooseScanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\frmModuleDisplay.resx">
+      <DependentUpon>frmModuleDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\PopUps\frmBusy.resx">
+      <DependentUpon>frmBusy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\PopUps\frmUpdateHostSetting.resx">
+      <DependentUpon>frmUpdateHostSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\PopUps\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\PopUps\frmEditDataPopUp.resx">
+      <DependentUpon>frmEditDataPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\PopUps\frmCaptureImage.resx">
+      <DependentUpon>frmCaptureImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclCaptureFinger.resx">
+      <DependentUpon>UclCaptureFinger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclCaptureImage.resx">
+      <DependentUpon>UclCaptureImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclDashboardCounter.resx">
+      <DependentUpon>UclDashboardCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclDataCapture.resx">
+      <DependentUpon>UclDataCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclEditData.resx">
+      <DependentUpon>UclEditData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclEnroll.resx">
+      <DependentUpon>UclEnroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclFingerEnroll.resx">
+      <DependentUpon>UclFingerEnroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclLocalDataReport.resx">
+      <DependentUpon>UclLocalDataReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclPreview.resx">
+      <DependentUpon>UclPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManagement\UclUploadData.resx">
+      <DependentUpon>UclUploadData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameworkControls\uclDisplayLabel.resx">
+      <DependentUpon>uclDisplayLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameworkControls\UclGridPager.resx">
+      <DependentUpon>UclGridPager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCorporateRegistration.resx">
+      <DependentUpon>frmCorporateRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804081443347_migrationX1.resx">
+      <DependentUpon>201804081443347_migrationX1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BioEnumerator.APIServer.APIObjs.BeneficiaryObj.datasource" />
+    <None Include="Properties\DataSources\BioEnumerator.DataAccessManager.DataContract.Beneficiary.datasource" />
+    <None Include="Properties\DataSources\BioEnumerator.DataAccessManager.DataContract.LocalArea.datasource" />
+    <None Include="Properties\DataSources\BioEnumerator.DataAccessManager.DataContract.MaritalStatus.datasource" />
+    <None Include="Properties\DataSources\BioEnumerator.DataAccessManager.DataContract.Occupation.datasource" />
+    <None Include="Properties\DataSources\BioEnumerator.DataAccessManager.DataContract.State.datasource" />
+    <None Include="Properties\DataSources\BioEnumerator.DataAccessManager.DataContract.StationInfo.datasource" />
+    <None Include="Properties\DataSources\XPLUG.WINDOWTOOLS.NameAndValueObject.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppFiles\BioResource\" />
+    <Folder Include="DataAccessManager\Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressLoader.gif" />
+    <None Include="Resources\finger_print.jpg" />
+    <None Include="Resources\buz2.png" />
+    <None Include="Resources\edit_Info.png" />
+    <None Include="Resources\ic_cancel_small.png" />
+    <None Include="Resources\ic_city_location.png" />
+    <None Include="Resources\ic_login.png" />
+    <None Include="Resources\ic_phone.png" />
+    <None Include="Resources\ic_plus3.png" />
+    <None Include="Resources\ic_save_small.png" />
+    <None Include="Resources\ic_security_code.png" />
+    <None Include="Resources\ic_stock_Request.png" />
+    <None Include="Resources\ic_user_16.png" />
+    <None Include="Resources\icc_anniversarry.png" />
+    <None Include="Resources\icc_person.png" />
+    <None Include="Resources\icc_Referral.png" />
+    <None Include="Resources\thumb_User_small.png" />
+    <None Include="Resources\unzoom.png" />
+    <None Include="Resources\uploading_icon.png" />
+    <None Include="Resources\icc_corporate.png" />
+    <None Include="Resources\icc_date_birth.png" />
+    <None Include="Resources\Hand.svg.png" />
+    <None Include="Resources\right-thumb.jpg" />
+    <None Include="Resources\Right-Thumb1.png" />
+    <None Include="Resources\left-index.png" />
+    <None Include="Resources\left-middle.png" />
+    <None Include="Resources\left-pinky.png" />
+    <None Include="Resources\left-ring.png" />
+    <None Include="Resources\left-thumb.png" />
+    <None Include="Resources\left-wrist.png" />
+    <None Include="Resources\right-index.png" />
+    <None Include="Resources\right-middle.png" />
+    <None Include="Resources\right-pinky.png" />
+    <None Include="Resources\right-ring.png" />
+    <None Include="Resources\right-thumb.png" />
+    <None Include="Resources\right-wrist.png" />
+    <None Include="Resources\Soji Green Circle 2.png" />
+    <None Include="Resources\right_hand.png" />
+    <None Include="Resources\left_hand.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\ic_logout.png" />
+    <None Include="Resources\icon_logo.ico" />
+    <None Include="Resources\ic_reset.png" />
+    <Content Include="SqlFiles\lga_lookup.sql" />
+    <Content Include="SqlFiles\lga_lookups.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

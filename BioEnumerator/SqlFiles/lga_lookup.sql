@@ -1,0 +1,1 @@
+Insert into LocalArea( LocalAreaId, StateId, Name, Status) Values(1,1, 'Aba North', 1)
